@@ -1,11 +1,17 @@
-import React from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import './App.css'
+import Header from './components/common/heading/Header'
 
-const App = () => {
-  return (
-    <div>
-      <h1>Hello react</h1>
-    </div>
-  )
+
+
+const router = createBrowserRouter([{
+  path: "/",
+  element: <Header></Header>,
+}])
+
+
+function App() {
+  return <RouterProvider router={router} />
 }
 
 export default App
